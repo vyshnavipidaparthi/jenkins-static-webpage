@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Pongal</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background-image: url("https://images.unsplash.com/photo-1604908554160-7f4aee5c2c9a");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.55);
+            padding: 40px 60px;
+            border-radius: 12px;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            margin-bottom: 10px;
+            color: #FFD700;
+            animation: glow 2s infinite alternate;
+        }
+
+        p {
+            font-size: 1.4rem;
+            line-height: 1.6;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px #FFD700;
+            }
+            to {
+                text-shadow: 0 0 20px #FFA500;
+            }
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 1rem;
+            color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay">
+        <h1>🌾 Happy Pongal 🌾</h1>
+        <p>
+            May this Pongal bring prosperity,<br>
+            happiness, and abundance to your life.<br>
+            Celebrate the harvest with joy and gratitude.
+        </p>
+
+        <div class="footer">
+            Wishing you and your family a joyful Pongal!
+        </div>
+    </div>
+</body>
+</html>
+
