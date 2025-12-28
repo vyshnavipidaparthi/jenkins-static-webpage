@@ -1,0 +1,38 @@
+pipeline{
+    agent {label 'member'}
+    stages{
+        stage('checkout'){
+            steps{
+                git branch: 'main', credentialsId: 'member', url: 'https://github.com/vyshnavipidaparthi/jenkins-static-webpage'
+            }
+        }
+        stage('simple calculator'){
+            steps{
+                sh '''
+                python3 calculator.py 10 5 2
+                '''
+            }
+        }
+        stage('Build'){
+            steps{
+                echo 'this is a static webpage'
+            }
+        }
+        stage('Deploy'){
+            steps{
+                sh '''
+                sudo rm -rf /var/www/html/*
+                sudo cp -r * /var/www/html/
+                '''
+            }
+        }
+    }
+    post{
+        success{
+            echo 'website is successfully launched'
+        }
+        failure{
+            echo 'website launch failed'
+        }
+    }
+}
