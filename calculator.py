@@ -1,39 +1,20 @@
-num1 = int(input("Enter first number: "))
-num2 = int(input("Enter second number: "))
+import sys
 
-print("""
-Choose operation:
-1) Addition (+)
-2) Subtraction (-)
-3) Multiplication (*)
-4) Division (/)
-5) Exit
-""")
-
-operation = int(input("Enter your choice: "))
+num1 = int(sys.argv[1])
+num2 = int(sys.argv[2])
+operation = int(sys.argv[3])
 
 match operation:
     case 1:
-        result = num1 + num2
-        print("Result:", result)
-
+        print(num1 + num2)
     case 2:
-        result = num1 - num2
-        print("Result:", result)
-
+        print(num1 - num2)
     case 3:
-        result = num1 * num2
-        print("Result:", result)
-
+        print(num1 * num2)
     case 4:
         if num2 == 0:
-            print("Error: Division by zero is not allowed")
+            print("Division by zero")
         else:
-            result = num1 / num2
-            print("Result:", result)
-
-    case 5:
-        print("Calculator exited")
-
+            print(num1 / num2)
     case _:
-        print("Invalid choice")
+        print("Invalid operation")
